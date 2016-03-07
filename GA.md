@@ -30,14 +30,56 @@ Query Credentials is designed to return credentials matching a specific search q
 To query the Guest Access database for a specific username (dororke) type the following into the terminal window (substituting your account values for things like 'YOUR-VHM-ID'):
 
 ```sh
-$ curl -X GET -H "X-AH-API-CLIENT-SECRET: daffa2ecd066ef09da98e4527749dee2" \
--H "X-AH-API-CLIENT-ID: 19a087a8" \
--H "X-AH-API-CLIENT-REDIRECT-URI: https://mysite.com" \
--H "Authorization: Bearer AHkUZggSUlyAoe2PPhav8AwQ9JhdbWv819a087a8" \
-"http://cloud-va.aerohive.com/xapi/v1/identity/credentials?ownerId=1265"
+$ curl -X GET -H "X-AH-API-CLIENT-SECRET: YOUR-CLIENT SECRET" \
+-H "X-AH-API-CLIENT-ID: YOUR-CLIENT-ID" \
+-H "X-AH-API-CLIENT-REDIRECT-URI: YOUR-REDIRECT-URL" \
+-H "Authorization: Bearer YOUR-ACCESS-TOKEN" \
+"http://cloud-va.aerohive.com/xapi/v1/identity/credentials?ownerId=YOUR-OWNER-ID"
 ```
 
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+##### [Create Credentials] 
+Create Credentials allows you to add a new user to the identity database. It is completed with a POST request. You must supply the following in the JSON body: [Create Swagger]
+- deliverMethod: ['NO_DELIVERY', 'EMAIL', 'SMS', 'EMAIL_AND_SMS']
+- policy: ['PERSONAL', 'GUEST']
+
+The following are optionally delivered in the JSON body:
+- deliverMethod: ['NO_DELIVERY', 'EMAIL', 'SMS', 'EMAIL_AND_SMS']
+- email (string, optional): The email of the credential
+- firstName (string, optional): The first name of the credential
+- lastName (string, optional): The last name of the credential
+- groupId (integer): The user group in which the credential is to be created
+- organization (string, optional): Home organization
+- phone (string, optional): The phone number of the credential
+- purpose: the reason this credential is created
+
+```sh
+$ curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "HmCredentialsRequestVo {
+deliverMethod: \"EMAIL_AND_SMS\",
+email (string, optional): \"Dororke@aerohive.com\" ,
+firstName (string, optional): \"Daniel\",
+lastName (string, optional): \"O'Rorke\",
+groupId (integer): 12345,
+organization: \"Aerohive Networks\",
+phone (string, optional): \"4085551234\",
+policy: ['GUEST'],
+purpose: \"the reason this credential is created\"
+}" "https://cloud-va.aerohive.com/xapi/v1/identity/credentials?ownerId=YOUR-OWNER-ID&memberOf=Aerohive%20Staff&adUser=AEROHIVE%5CDANIELO"
+```
+
+##### Delete Credentials
+User Credentials may be deleted by sending a DELETE command to the credentials endpoint with the ID numbers of the user records you wish to delete. [Delete Swagger]
+```sh
+curl -X DELETE --header "Accept: */*" "https://cloud-va.aerohive.com/xapi/v1/identity/credentials?ownerId=YOUR-OWNER-ID&ids=23456789&ids=34567890&ids=45678901&memberOf=Aerohive%20Staff&adUser=Aerohive%5Cdanielo"
+```
+
+
+View the [Swagger Documentation] on all the Identity APIs including: 
+- Query
+- Create
+- Delete
+- Update
+- Deliver
+- Renew
 
 ### Version
 0.82
@@ -46,4 +88,6 @@ This text you see here is *actually* written in Markdown! To get a feel for Mark
    [configuring a User Group]: <http://docs.aerohive.com/330000/docs/help/english/ng/learning-whats-new.htm#gui/configuration/configuring-user-group.htm>
    [authentication]: <https://developer.aerohive.com/docs/authentication>
    [video tutorial]: <https://training.aerohive.com/#/courses/course/207185>
+   [Delete Swagger]: <https://developer.aerohive.com/docs/api-documentation#!/identity/removeCredentialsUsingDELETE>
+   [Swagger Documentation]: <https://developer.aerohive.com/docs/api-documentation#!/identity>
 
