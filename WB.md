@@ -37,7 +37,7 @@ The Post URL should match exactly where you expect the data to arrive on your se
 "Access Token" is a secret value which your server should check accompanies each POST to ensure no one is attempting to forge requests.
 
 ##### Using the Webhooks Configuration APIs (beta)
-Make a POST request to <your datacenter>/xapi/beta/configuration with the following headers:
+Make a POST request to <your datacenter>/xapi/beta/configuration/webhooks with the following headers:
 |Header                         |   Value               |
 |-------------------------------|:----------------------|
 |X-AH-API-CLIENT-SECRET         | (your client secret)  |
