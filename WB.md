@@ -27,14 +27,39 @@ Save the above script somewhere and run it. You should see some output like this
 ```
 Now we're ready to listen for incoming data. Of course, in production, you'll want to set up something more robust than this.
 
-##### Configuring Hive Manager to Send Presence Analytics Data
+#### Configuring Hive Manager to Send Presence Analytics Data
 HiveManager may be configured to send data to your server either through the user interface, or by using the webhooks configuration API.
-
+##### Using the HiveManger WebApp
 In order to receive streaming presence data, you must configure HiveManager to communicate with your sever. Log into HiveManager, and click the 'settings' icon. In the left navigation bar, click on 'API Data Management'. After clicking the '+' icon, you should see a screen like this:
 !(New Data Feed)
 
 The Post URL should match exactly where you expect the data to arrive on your server.
 "Access Token" is a secret value which your server should check accompanies each POST to ensure no one is attempting to forge requests.
+
+##### Using the Webhooks Configuration APIs (beta)
+Make a POST request to <your datacenter>/xapi/beta/configuration with the following headers:
+|Header                         |   Value               |
+|-------------------------------|:----------------------|
+|X-AH-API-CLIENT-SECRET         | (your client secret)  |
+|X-AH-API-CLIENT-ID             | (your client ID)      |
+|X-AH-API-CLIENT-REDIRECT-URI   | (your redirect URL)   |
+|Authorization                  | (your access token)   |
+|Content-Type                   | application/json      |
+
+The JSON body of the POST request must contain the following:
+```
+{
+  "application": "string",
+  "ownerId": 0,
+  "secret": "string",
+  "url": "string"
+}
+```
+Application is the name of the application receiving the data.
+
+Secret is a string value (may be random) which you should verify on all incoming data to ensure that it's really from HiveManager and not forged.
+
+URL is the exact address where we should send the data to your server.
 
 #### Sample Data:
 ```
