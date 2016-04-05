@@ -1,7 +1,7 @@
 # Aerohive Location APIs
 Aerohive Location APIs allow business access to real-time location statistics in order to improve customer engagement, loyalty, and operational efficieny across sites. Data collected by the Access Point is sent to the Aerohive Cloud Services platform, processed, and made available via APIs. You may use the data from ACS to compare visitor trends over time, map high-traffic areas of a store, or visit frequency. 
 
- ## Retail Analytics Partners:
+## Retail Analytics Partners:
 ![Cloud4Wi](http://cloud4wi.com/wp-content/uploads/2015/08/logo_cloud4wi.png)
 
 Using Cloud4Wi, you can provide your customers with fully customizable Guest Wi-Fi and an enhanced on-site experience to connect them to your brand for increased loyalty. The platform collects valuable information on your customers behaviors and empowers youto boost your business performance. Lastly, you can design personable user journeys to push your marketing and advertising messages and influence your customers purchase intents.
