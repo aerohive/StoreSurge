@@ -13,7 +13,9 @@ Along with Aerohive, Cloud4Wi provides you maximum flexability and scalability. 
 [Euclid Analytics] and Aerhoive make it fast and easy to collect insightful data across your entire retail chain. Rapidly understanding customer traffic and behaviors to optimize marketing, in-store operations, strategic decision-making and staffing activities. 
 
 ### Setup
-To use the Location and Presence Analtytics built into the Aerohive Cloud Services platform, you must **enable presence data collection** on your hardware. The easiest way to do so is by following along with this [video tutorial].
+To use the Location and Presence Analtytics built into the Aerohive Cloud Services platform, you must **enable presence data collection** on your hardware. The easiest way to do so is by navigating to Configure -> Common Objects -> Radio Profiles, and selecting a radio profile you use on your network. ![RadioProfile](https://raw.githubusercontent.com/aerohive/StoreSurge/master/RadioProfile.tiff)
+Near the bottom of the page, you will see a section on Presence Server. Presence Analytics must be turned on in order to collect presence data.
+![Presence Server](https://raw.githubusercontent.com/aerohive/StoreSurge/master/PresenceSettings.tiff)
 
 ### Location API Calls
 >In order to make API calls to the Aerohive Location APIs, you must have an API Access Token. If you have not already obtained one, read the section on [authentication] before proceeding further.
