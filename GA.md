@@ -53,7 +53,7 @@ The following are optionally delivered in the JSON body:
 - purpose: the reason this credential is created
 
 ```sh
-$ curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "HmCredentialsRequestVo {
+$ curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "{
 deliverMethod: \"EMAIL_AND_SMS\",
 email (string, optional): \"Dororke@aerohive.com\" ,
 firstName (string, optional): \"Daniel\",
