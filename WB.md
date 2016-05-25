@@ -38,6 +38,7 @@ The Post URL should match exactly where you expect the data to arrive on your se
 
 ##### Using the Webhooks Configuration APIs (beta)
 Make a POST request to <your datacenter>/xapi/beta/configuration/webhooks with the following headers:
+
 |Header                         |   Value               |
 |-------------------------------|:----------------------|
 |X-AH-API-CLIENT-SECRET         | (your client secret)  |
