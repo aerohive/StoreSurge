@@ -48,7 +48,7 @@ curl -X GET -H "X-AH-API-CLIENT-SECRET: YOUR-CLIENT-SECRET" \
 ```
 
 ##### Client Location
-The client location API will give the current coordinates of the client devices in as XY coordinates on your building floorplan. If you have entered GPS coordinates for your AP locations, the API will return calculated GPS coordinates for the client location.
+The client location API will give the current coordinates of the client devices in as XY coordinates on your building floorplan as measured in meters. If the floorplan is measured in feet in HiveManager, it is important to note this difference when you compare the x and y values given by the API to the measurements on the floor plan in HiveManager. If you have entered GPS coordinates for your AP locations, the API will return calculated GPS coordinates for the client location.
 
 ![Floorplan](https://github.com/aerohive/StoreSurge/raw/master/Floormap.tiff)
 ```sh
