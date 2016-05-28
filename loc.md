@@ -74,8 +74,8 @@ curl -X GET -H "X-AH-API-CLIENT-SECRET: YOUR-CLIENT-SECRET" \
 |lat	    | The GPS latitude of the client device |
 |lng	    | The longitude of the client device |
 |unc	    | Uncertainty in meters |
-|x	        | X offset|
-|y	        | Y offset|
+|x	        | X offset from the left of the building floorplan |
+|y	        | Y offset from the right of the building floor plan |
 
 
 ### Version
