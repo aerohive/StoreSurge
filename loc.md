@@ -14,6 +14,7 @@ Along with Aerohive, Cloud4Wi provides you maximum flexability and scalability. 
 
 ### Setup
 To use the Location and Presence Analtytics built into the Aerohive Cloud Services platform, you must **enable presence data collection** on your hardware. The easiest way to do so is by navigating to Configure -> Common Objects -> Radio Profiles, and selecting a radio profile you use on your network. ![RadioProfile](https://raw.githubusercontent.com/aerohive/StoreSurge/master/RadioProfile.tiff)
+
 Near the bottom of the page, you will see a section on Presence Server. Presence Analytics must be turned on in order to collect presence data.
 ![Presence Server](https://raw.githubusercontent.com/aerohive/StoreSurge/master/PresenceSettings.tiff)
 
