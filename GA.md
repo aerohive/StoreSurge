@@ -86,7 +86,8 @@ View the [Swagger Documentation] on all the Identity APIs including:
 
 
    [configuring a User Group]: <http://docs.aerohive.com/330000/docs/help/english/ng/learning-whats-new.htm#gui/configuration/configuring-user-group.htm>
-   [authentication]: <https://developer.aerohive.com/docs/authentication>
+   
+   [authentication]: <https://developer.aerohive.com/docs/initial-setup>
    [video tutorial]: <https://training.aerohive.com/#/courses/course/207185>
    [Delete Swagger]: <https://developer.aerohive.com/docs/api-documentation#!/identity/removeCredentialsUsingDELETE>
    [Swagger Documentation]: <https://developer.aerohive.com/docs/api-documentation#!/identity>
